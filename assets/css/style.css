@@ -2,6 +2,8 @@
     --primary-color: #56644c;
     --secondary-color: #fdd892;
     --tertiary-color: #29172b;
+    --primary-background-color: #fae4bab7;
+    --secondary-background-color: #f3e2c4b7;
 }
 
 * {
@@ -32,7 +34,6 @@ header {
 }
 
 .welcome {
-    height: 100px;
     width: 500px;
     margin: 5px;
     background-color: var(--tertiary-color);
@@ -46,7 +47,6 @@ header h1 {
     display: flex;
     justify-content: center;
     margin: 0;
-    margin-top: 20px;
     font-size: 36px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -58,7 +58,7 @@ header a {
 }
 
 header nav {
-    margin: 20px;
+    margin-top: 20px;
 }
 
 header nav ul {
@@ -101,9 +101,8 @@ header nav ul li a:hover:after {
 
    /* HERO / JUMBOTRON STYLES START */
 .hero {
-    height: 400px;
+    height: 500px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("../images/heroimg-option3.jpg");
     background-size: cover;
     background-position: center;
@@ -113,8 +112,8 @@ header nav ul li a:hover:after {
 .hero img {
     height: 300px;
     width: 300px;
-    margin: 5%;
     border-radius: 1000px;
+    margin: 100px 25px;
 }
 
 .hero h2 {
@@ -129,11 +128,12 @@ header nav ul li a:hover:after {
     font-size: 28px;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-    /* HERO / JUMBOTRON STYLES END */
-    
+/* HERO / JUMBOTRON STYLES END */
+
+/* SECTION STYLES START */    
 .flex-column {
     display: flex;
-    margin: 30px;
+    margin: 0 30px;
     }
 
 .section-title {
@@ -141,14 +141,22 @@ header nav ul li a:hover:after {
     border-right: 3px solid;
     color: var(--primary-color);
     padding-bottom: 20px;
+    margin: 50px 50px 50px 10px;
+    flex: 1 0 200px;
+    justify-content: center;
+}
+
+.section-title .primary-border h2 {
     text-align: center;
-    margin-right: 30px;
-    width: 30%;
-    }
+}
+
+.primary-border {
+    border-color: var(--tertiary-color);
+}
 
 .content {
     flex: 0 1 1500px;
-    margin-right: 60px;
+    margin: 70px 50px 70px 0;
     line-height: 1.5;
     font-size: 18px;
 }
@@ -156,3 +164,120 @@ header nav ul li a:hover:after {
 .content p {
     margin: 15px 0 15px 0;
 }
+/* SECTION STYLES END */ 
+
+/* ABOUT ME STYLES START */
+.bio {
+    background-color: var(--primary-background-color);
+}
+
+/* ABOUT ME STYLES END */
+
+/* WORK STYLES START */
+.projects {
+    background-color: var(--secondary-background-color);
+}
+
+/* WORK STYLES END */
+
+/* CONTACT ME STYLES START */
+.contact {
+    background-color: var(--primary-background-color);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.contact .content {
+    flex-direction: row;
+}
+
+.contact .content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.contact .content ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    display: inline-block;
+    position: relative;
+    color: var(--tertiary-color);
+}
+
+.contact .content ul li a:after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 15%;
+    background-color: var(--tertiary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.contact .content ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+/* CONTACT ME STYLES END */
+
+/* RESUME STYLES START */
+.cv {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cv .content {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.cv .content a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    display: inline-block;
+    position: relative;
+    color: var(--tertiary-color);
+    justify-content: center;
+    text-decoration: none;
+}
+
+.cv .content a:after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 15%;
+    background-color: var(--tertiary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cv .content a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* RESUME STYLES END */
